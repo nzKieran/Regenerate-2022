@@ -1,0 +1,14 @@
+<hr>(align:"<==")+(box:"X=")[
+  (link:"Save game")[
+	(if:(save-game:"Slot A"))[
+	(if: (saved-games:) contains "Slot A")[
+	  Slot A is in the saved-games datamap!
+	]
+	(link: "Load Slot A?" )[
+		(load-game: "Slot A")
+	]
+	](else: )[
+	  Sorry, I couldn't save your game.
+	]
+  ]
+](align:"==>")+(box:"=X")[(current-time:)]
